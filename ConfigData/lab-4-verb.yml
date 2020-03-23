@@ -1,2 +1,6 @@
 
+---
+spring:
+  profiles: verb-es
+  
 words: correr,saber,tener,ver,comprar
