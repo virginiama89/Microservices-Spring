@@ -1,0 +1,10 @@
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/virginiama89/Microservices-With-Spring
+          searchPaths: ConfigData
+server:
+  port: 8001
