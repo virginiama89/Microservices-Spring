@@ -7,15 +7,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RefreshScope
-public class LuckyWordController {
-	@Value("${wordConfigVir.luckyWord}") String luckyWord;
-	@Value("${wordConfigVir.preamble}") String preamble;
+public class LuckyWordController2 {
+	 
+	//  Notice how the prefix of "wordConfig" 
+	//  must be repeated without @ConfigurationProperties:	
+	@Value("${wordConfig.luckyWord}") String luckyWord;
+	@Value("${wordConfig.preamble}") String preamble;
 	
-	@GetMapping("lucky-word-vir")
+	@GetMapping("/lucky-word2")
 	public String showLuckyWord() {
-		return preamble + " " + luckyWord;
+		return preamble + ": " + luckyWord;
 	}
-	
+
 	public String getLuckyWord() {
 		return luckyWord;
 	}
@@ -23,7 +26,7 @@ public class LuckyWordController {
 	public void setLuckyWord(String luckyWord) {
 		this.luckyWord = luckyWord;
 	}
-	
+
 	public String getPreamble() {
 		return preamble;
 	}
@@ -31,4 +34,5 @@ public class LuckyWordController {
 	public void setPreamble(String preamble) {
 		this.preamble = preamble;
 	}
+	
 }
