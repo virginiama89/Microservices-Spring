@@ -2,3 +2,7 @@
 wordConfig:
   preamble: The lucky word is
   luckyWord: Madrid
+ ---
+wordConfigVir:
+  preamble: Mi nombres es
+  luckyWord: Virginia
